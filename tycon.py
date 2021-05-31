@@ -31,7 +31,7 @@ while information != Menu.Exit:
             money += moneyInfo
             print("Dodano do twojego konta", moneyInfo, "zł!", "Aktualnie masz", money, "zł na koncie")
         elif information == Menu.BuyHouse:
-           if int(money) >= 1:
+           if int(money) >= 50:
                 moneyInfo += 1
                 money -= 1
                 print("Gratulajce! Zarabiasz teraz:", moneyInfo, "zł za kod")
