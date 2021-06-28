@@ -2,7 +2,7 @@ from random import randint
 from enum import IntEnum
 
 money = 0
-moneyInfo = 1
+money_info = 1
 information = ''
 Menu = IntEnum("Menu", "BuyHouse Money CodeInfo Exit")
 
@@ -28,17 +28,17 @@ while information != Menu.Exit:
         information = int(input("Przepisz kod by dostać pięniądze lub wybierz co chcesz zrobić"))
 
         if str(information) == code:
-            money += moneyInfo
-            print("Dodano do twojego konta", moneyInfo, "zł!", "Aktualnie masz", money, "zł na koncie")
+            money += money_info
+            print("Dodano do twojego konta", money_info, "zł!", "Aktualnie masz", money, "zł na koncie")
         elif information == Menu.BuyHouse:
            if int(money) >= 50:
-                moneyInfo += 1
+                money_info += 1
                 money -= 1
-                print("Gratulajce! Zarabiasz teraz:", moneyInfo, "zł za kod")
+                print("Gratulajce! Zarabiasz teraz:", money_info, "zł za kod")
            else:
                 print("Nie masz 50 zł")
         elif information == Menu.Money:
             print("Twoje pieniądze:", money)
         elif information == Menu.CodeInfo:
-            print("Aktualnie za kod zarabiasz:", moneyInfo, "zł")
+            print("Aktualnie za kod zarabiasz:", money_info, "zł")
     except: print("Wystąpił błąd")
