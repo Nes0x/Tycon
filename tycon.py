@@ -33,7 +33,7 @@ while information != Menu.Exit:
         elif information == Menu.BuyHouse:
            if int(money) >= 50:
                 money_info += 1
-                money -= 1
+                money -= 50
                 print("Gratulajce! Zarabiasz teraz:", money_info, "zł za kod")
            else:
                 print("Nie masz 50 zł")
